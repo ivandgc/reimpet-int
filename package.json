@@ -1,17 +1,31 @@
 {
   "name": "reimpet-int",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.86.0"
+    "semantic-ui-react": "^0.86.0",
+    "serialize-javascript": "^1.7.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "webpack -w & nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -24,5 +38,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.12.5",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  }
 }
