@@ -1,33 +1,80 @@
-.App {
-  text-align: center;
+.float-right {
+  width: 39%;
+  float: right;
+  margin-right: 8%;
+  padding-right: 3%;
+  padding-top: 8%;
+  font-size: large;
+  color: black;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.float-left {
+  float: left;
+  padding-left: 15%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.team-picture {
+  margin-left: 8%;
+  padding-top: 4%
 }
 
-.App-link {
-  color: #61dafb;
+.team-text {
+  margin-right: 21%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about-clients {
+  float: left;
+  width: 39%;
+  margin-left: 22%;
+  padding-top: 5%;
+  font-size: large;
+}
+
+.about-clients-picture {
+  float: right;
+  margin-right: 23%;
+  padding-top: 4%;
+}
+
+.ui.segment.home-segment {
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
+.ui.segment:first-child.banner {
+  margin-top: 14px;
+}
+
+.reimpet-green {
+  background-color: #008000;
+}
+
+.ui.center.aligned.header.banner-name {
+  font-size: 500%;
+  font-style: italic;
+  padding: 2%;
+  color: #008000;
+}
+
+.modal-description {
+  position: relative;
+}
+
+.expand-icon {
+  position: absolute;
+  bottom: 0;
+}
+
+.fullscreen-container {
+  height: 100%;
+}
+
+.fullscreen-image {
+  height: 100%;
+}
+
+.ui.image.card-image {
+  height: 33vh;
+  width: 100%;
+  margin:auto;
 }
