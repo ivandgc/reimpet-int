@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css'
-import { Card, Image as SemanticImage , Modal, Header, Icon } from 'semantic-ui-react'
+import { Card, Image , Modal, Header, Icon } from 'semantic-ui-react'
 
 class Product extends Component {
   imageSource = `../products/${this.props.product.pictures}/`
@@ -28,7 +28,7 @@ class Product extends Component {
     let i = 1;
     let images = []
     while ( i < (this.props.product.pictureCount+1) ) {
-      images.push(<SemanticImage key={i} src={ this.imageSource + `${i}.JPG`} onClick={ this.selectHandler(i) }/>);
+      images.push(<Image key={i} src={ this.imageSource + `${i}.JPG`} onClick={ this.selectHandler(i) }/>);
       i++;
     }
     return images
@@ -45,7 +45,7 @@ class Product extends Component {
     // create ProductInfo Component for modals
     return(
         <Card onClick={ this.openModal }>
-          <SemanticImage className='card-image' src={ this.imageSource + "1.JPG" } />
+          <Image className='card-image' src={ this.imageSource + "1.JPG" } />
           <Card.Content>
               <Card.Header>{ this.props.product.name }</Card.Header>
               <Card.Meta>{ this.props.product.location }</Card.Meta>
@@ -53,14 +53,14 @@ class Product extends Component {
 
         <Modal basic size='fullscreen' open={ fullscreenImage } onClose={ this.closeFullscreen } onClick={ this.closeFullscreen } style={{height: '100vh'}}>
           <Modal.Content image className='fullscreen-container'>
-            <SemanticImage className='fullscreen-image' centered src={ selectedImage }/>
+            <Image className='fullscreen-image' centered src={ selectedImage }/>
           </Modal.Content>
         </Modal>
 
         <Modal open={ open } onClose={ this.closeModal }>
           <Modal.Header>{ this.props.product.name }</Modal.Header>
           <Modal.Content image>
-            <SemanticImage wrapped src={ selectedImage } onClick={ this.expandImage }/>
+            <Image wrapped src={ selectedImage } onClick={ this.expandImage }/>
             <Modal.Description className='modal-description'>
               <Header>{ this.props.product.id }</Header>
               <p>{ this.props.product.location }</p>
@@ -69,9 +69,9 @@ class Product extends Component {
             </Modal.Description>
           </Modal.Content>
           <Modal.Actions>
-            <SemanticImage.Group size='tiny' style={{float: 'left'}}>
+            <Image.Group size='tiny' style={{float: 'left'}}>
               { images }
-            </SemanticImage.Group>
+            </Image.Group>
           </Modal.Actions>
         </Modal>
       </Card>
