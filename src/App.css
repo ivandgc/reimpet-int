@@ -36,9 +36,13 @@
   padding-top: 4%;
 }
 
-.ui.segment.home-segment {
-  display: inline-block;
-  margin-bottom: 2%;
+.intro-text {
+  color: black;
+  font-size: x-large;
+}
+
+.about-text {
+  font-size: large;
 }
 
 .ui.segment:first-child.banner {
