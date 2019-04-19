@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css'
 import clientsImage from '../res/our-clients.png'
 import teamImage from '../res/our-team.png'
-import { Segment, Header, Image, Divider, Grid } from 'semantic-ui-react'
+import { Header, Image, Divider, Grid } from 'semantic-ui-react'
 
 class About extends Component {
 
