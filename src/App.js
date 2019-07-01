@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, NavLink, Link } from 'react-router-dom'
 import { Image, Menu, Segment } from 'semantic-ui-react'
-import logo from './res/reimpet-logo.png'
+import logo from './res/reimpet-logo.jpg'
 import Home from './components/Home'
 import About from './components/About'
 import ProductContainer from './components/ProductContainer'
 import Contact from './components/Contact'
+import EquipmentForm from './components/EquipmentForm'
+import Inventory from './components/Inventory'
 
 class App extends Component {
 
@@ -34,7 +36,7 @@ class App extends Component {
           <Menu.Item
             as={NavLink}
             exact to='/products'
-            name='products'
+            name='equipment'
             active={activeItem === 'products'}
             onClick={this.handleItemClick}/>
           <Menu.Item
@@ -48,6 +50,8 @@ class App extends Component {
         <Route path='/about-us' render={() => <About />}/>
         <Route path='/products' render={() => <ProductContainer handleBrowser={ () => this.handleItemClick({}, { name: 'contact-us' }) }/>}/>
         <Route path='/contact-us' render={() => <Contact />}/>
+        <Route exact path='/inventory' render={() => <Inventory /> } />
+        <Route exact path='/inventory/new' render={() => <EquipmentForm /> } />
       </div>
     );
   }
